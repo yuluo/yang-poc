@@ -1,0 +1,79 @@
+<network_version xmlns='http://yang.idirect.net/networkversion'>1.2.0.0</network_version>
+<inetprofile xmlns='http://yang.idirect.net/inetprofile'>
+    <inetprofile>
+        <obj_parentid>61</obj_parentid>
+        <obj_id>1815</obj_id>
+        <obj_name>iNetProfile-1823</obj_name>
+        <isencrypted>true</isencrypted>
+        <isifnetwork>true</isifnetwork>
+        <beamid_list>1809</beamid_list>
+        <backoffpercentage>0.02</backoffpercentage>
+        <downstreambandwidth>54</downstreambandwidth>
+    </inetprofile>
+</inetprofile>
+<beam xmlns='http://yang.idirect.net/beam'>
+    <beam>
+        <obj_id>1809</obj_id>
+        <obj_name>SAT_0_Beam-1</obj_name>
+        <obj_parentid>1748</obj_parentid>
+        <eirp>0</eirp>
+        <gbyt>0</gbyt>
+        <radius>3</radius>
+        <azimuth>0</azimuth>
+        <beam_type>Circular</beam_type>
+        <elevation>0</elevation>
+        <beam_index>1</beam_index>
+        <beamcontour/>
+        <autopopulate>2</autopopulate>
+        <sac_in_centre>32767</sac_in_centre>
+    </beam>
+</beam>
+<satellite xmlns='http://yang.idirect.net/satellite'>
+    <satellite>
+        <obj_id>1748</obj_id>
+        <obj_name>SAT_0</obj_name>
+        <obj_parentid>60</obj_parentid>
+        <latitude>0</latitude>
+        <longitude>0</longitude>
+        <domainname>SAT_0</domainname>
+        <ncr_offset>1000</ncr_offset>
+        <preference>8</preference>
+        <skew_margin>2</skew_margin>
+        <maximum_skew>2</maximum_skew>
+        <radius_sat_id>1</radius_sat_id>
+        <hysteresis_sec>60</hysteresis_sec>
+        <hysteresis_kbps>5000</hysteresis_kbps>
+        <congestion_floor>-5000</congestion_floor>
+        <congestion_weight>1</congestion_weight>
+        <skew_polarization>3</skew_polarization>
+        <minimum_look_angle>2</minimum_look_angle>
+        <acquisition_timeout>60000</acquisition_timeout>
+        <beam_switch_timeout>6000</beam_switch_timeout>
+        <orbital_inclination>0</orbital_inclination>
+        <sat_hysteresis_kbps>5000</sat_hysteresis_kbps>
+        <ready_switch_timeout>4000</ready_switch_timeout>
+        <sat_congestion_ceiling>5000</sat_congestion_ceiling>
+    </satellite>
+</satellite>
+<downstreamcarrier xmlns='http://yang.idirect.net/downstreamcarrier'>
+    <downstreamcarrier>
+        <obj_id>1817</obj_id>
+        <obj_name>DownstreamCarrier1</obj_name>
+        <obj_parentid>1815</obj_parentid>
+        <minmodcod>QPSK-1/4</minmodcod>
+        <dvbs2fastfademargin>1</dvbs2fastfademargin>
+        <error_correction>LDPC  BCH</error_correction>
+        <carrier_spacing_rolloff>1.20 (20% Roll-off)</carrier_spacing_rolloff>
+        <dvbs2fastfadethreshold>0.5</dvbs2fastfadethreshold>
+        <maxmodcod>16APSK-8/9</maxmodcod>
+        <symbolrate>40000</symbolrate>
+        <dvbs2threshold>0.2</dvbs2threshold>
+        <carrier_spacing>1.2</carrier_spacing>
+        <dvbs2systemmarginsteadystate>0.5</dvbs2systemmarginsteadystate>
+        <modulation>ACM</modulation>
+        <spreading_factor>No Spreading</spreading_factor>
+        <dvbs2fastslope>0.3</dvbs2fastslope>
+        <power>-4</power>
+        <relativecentrefrequency>0</relativecentrefrequency>
+    </downstreamcarrier>
+</downstreamcarrier>

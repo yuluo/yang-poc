@@ -1,0 +1,63 @@
+module idirect-inet-profile {
+	namespace "http://yang.idirect.net/inetprofile";
+	prefix inetprofile;
+	
+	import idirect-type {
+	  	prefix idirecttype;
+	}
+	
+	import idirect-satellite {
+		prefix satellite;
+	}
+	
+	organization "VT iDirect";
+	contact "Maestro";
+	description "A test model for inetprofile";
+	
+	revision 2019-02-26 {
+	  description "prove of concept";
+	}
+	
+	
+	container inetprofile {
+		list inetprofile{
+			key "obj_id";
+			description "inetprofile";
+			
+			uses idirecttype:obj_header;
+			
+			leaf isencrypted {
+				type boolean;
+				default false;
+				description "Encrypted";
+			}
+			
+			leaf isifnetwork {
+				type boolean;
+				default false;
+				description "IFNetwork";
+			}
+			
+			leaf backoffpercentage {
+				type idirecttype:percentage;
+				default 0.02;
+				description "Backoff Percentage";
+			}
+			
+			leaf downstreambandwidth {
+				type idirecttype:positive-decimal;
+				mandatory true;
+				description "Downstream Bandwidth";
+				units "MHz";
+			}
+			
+			leaf-list beamid_list {
+				type uint64;
+				description "Beam List";
+				min-elements 1;
+			}
+		}
+		
+	}
+	
+}

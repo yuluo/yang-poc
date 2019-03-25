@@ -1,0 +1,111 @@
+module idirect-type {
+	namespace "http://yang.idirect.net/idirect-type";
+	prefix idirecttype;
+	
+	revision 2019-02-26 {
+	  description "prove of concept";
+	}
+	
+	typedef decimal {
+		type decimal64 {
+			fraction-digits 2;
+		}
+	}
+	
+	typedef positive-decimal {
+	  	type decimal64 {
+			fraction-digits 2;
+			range "0..max"; 
+		}
+	}
+	
+	typedef percentage {
+		type decimal64 {
+			fraction-digits 2;
+			range "0..1"; 
+		}
+	}
+	
+	typedef int-range-1-255 {
+		type uint64 {
+			range "1..255";
+		}
+	}
+	
+	typedef int-range-1000-45000 {
+		type uint64 {
+			range "1000..45000";
+		}
+	}
+	
+	typedef int-range-1-32767 {
+		type uint64 {
+			range "1..32767";
+		}
+	}
+	
+	typedef decimal-range-10 {
+		type decimal64 {
+			fraction-digits 2;
+			range "-10..10";
+		}
+	}
+	
+	typedef decimal-range-35-5 {
+		type decimal64 {
+			fraction-digits 2;
+			range "-35..5";
+		}
+	}
+	
+	typedef decimal-range-0-10 {
+		type decimal64 {
+			fraction-digits 2;
+			range "0..10";
+		}
+	}
+	
+	typedef decimal-range-180 {
+		type decimal64 {
+			fraction-digits 2;
+			range "-180..180";
+		}
+	}
+	
+	typedef decimal-range-0-90 {
+		type decimal64 {
+			fraction-digits 2;
+			range "0..90";
+		}
+	}
+
+	typedef boolean-int {
+		type uint8 {
+			range 0 | 1;
+		}
+	}
+	
+  grouping obj_header {
+		description "obj_header";
+
+		leaf obj_id {
+			type uint64;
+			mandatory true;
+			description "obj_id";
+		}
+		
+		leaf obj_parentid {
+		  type uint64;
+		  mandatory true;
+		  description "obj_parentid";
+		}
+		
+		leaf obj_name {
+		  type string;
+		  mandatory true;
+		  description "obj_name";
+		}
+
+  }
+	
+}

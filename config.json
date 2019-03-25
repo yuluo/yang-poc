@@ -1,0 +1,12 @@
+{  
+   "idirect-inet_ob_profile":{  
+      "query":"something.graphql",
+      "validation":[  
+         "./yang/object/idirect-beam.yang",
+         "./yang/object/idirect-downstream-carrier.yang",
+         "./yang/object/idirect-inet-profile.yang",
+         "./yang/object/idirect-satellite.yang"
+      ],
+      "transformation":"./hook/inet/inet"
+   }
+}

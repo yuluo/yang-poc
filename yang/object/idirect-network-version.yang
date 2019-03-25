@@ -1,0 +1,15 @@
+module idirect-network-version {
+	namespace "http://yang.idirect.net/networkversion";
+	prefix networkversion;
+	
+	import idirect-enum {
+	  prefix idirectenum;
+	}
+	
+	leaf network_version {
+		type idirectenum:network-version;
+		mandatory true;
+		description "network version";
+	}
+	
+}	

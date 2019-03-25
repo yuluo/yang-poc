@@ -1,0 +1,21 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "description": "POC for Business rule engine",
+  "main": "poc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuanting Luo",
+  "license": "ISC",
+  "dependencies": {
+    "JSONPath": "^0.11.2",
+    "es6-shim": "^0.35.4",
+    "js2xmlparser": "^4.0.0",
+    "jsonpath": "^1.0.1",
+    "promise": "^8.0.2",
+    "ssh2": "^0.8.2",
+    "xml2js": "^0.4.19",
+    "yang-js": "^0.20.12"
+  }
+}

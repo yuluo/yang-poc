@@ -1,0 +1,1142 @@
+. executing test named "poc.js"
+.. ssh connection ready
+... netconf subsystem acquired
+.... sending client hello
+>>>> msg netconf hello >>>>
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability><capability>urn:ietf:params:netconf:base:1.1</capability><capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability><capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability></capabilities></hello>]]>]]>
+---- msg netconf hello ----
+.... received (partial) msg, len: 3776
+<<<< partial msg <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>41</session-id></hello>]]>]]>
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>41</session-id></hello>
+---- msg netconf ----
+..... hello
+...... capability - urn:ietf:params:netconf:base:1.0
+...... capability - urn:ietf:params:netconf:base:1.1
+...... capability - urn:ietf:params:netconf:capability:writable-running:1.0
+...... capability - urn:ietf:params:netconf:capability:candidate:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.1
+...... capability - urn:ietf:params:netconf:capability:xpath:1.0
+...... capability - urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file
+...... capability - urn:ietf:params:netconf:capability:validate:1.0
+...... capability - urn:ietf:params:netconf:capability:validate:1.1
+...... capability - urn:ietf:params:netconf:capability:rollback-on-error:1.0
+...... capability - urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&also-supported=report-all-tagged
+...... capability - urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8
+...... capability - http://tail-f.com/ns/netconf/extensions
+...... capability - http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&revision=2015-06-16
+...... capability - http://tail-f.com/ns/common/query?module=tailf-common-query&revision=2017-12-15
+...... capability - http://tail-f.com/ns/example/dhcpd?module=dhcpd
+...... capability - http://tail-f.com/ns/kicker?module=tailf-kicker&revision=2017-09-28
+...... capability - http://tail-f.com/yang/acm?module=tailf-acm&revision=2013-03-07
+...... capability - http://tail-f.com/yang/common?module=tailf-common&revision=2018-03-01
+...... capability - http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&revision=2016-11-24
+...... capability - http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&revision=2017-11-20
+...... capability - http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&revision=2018-06-19
+...... capability - http://yang.idirect.net/idirect-remote?module=idirect-remote&revision=2018-06-19
+...... capability - urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&revision=2014-08-06&features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5
+...... capability - urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&revision=2012-02-22
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&revision=2010-10-04
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&revision=2012-02-06
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&revision=2016-06-21
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&revision=2011-06-01
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&revision=2011-06-01
+>>>> msg netconf >>>>
+
+#2211
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <target>
+        <running />
+    </target>
+    <config><idirect-inet_ob_profile xmlns='http://yang.idirect.net/idirect-inet_ob_profile'>
+    <idx>9876</idx>
+    <data>
+        <NMS>
+            <type>PP_INET_OB_OPT</type>
+            <element_id>1815</element_id>
+            <version>V1.2.0.0</version>
+            <element_parent_id>61</element_parent_id>
+        </NMS>
+        <OUTBOUND>
+            <DVBS2>
+                <system_margin_steady_state>0.5</system_margin_steady_state>
+                <fast_fade_margin>1</fast_fade_margin>
+                <fast_slope>0.3</fast_slope>
+                <fast_fade_threshold>0.5</fast_fade_threshold>
+                <mode>acm</mode>
+            </DVBS2>
+            <MATCHING_CRITERIA>
+                <GEO_SCOPE>
+                    <beam_id>1</beam_id>
+                    <sat_domain>SAT_0</sat_domain>
+                </GEO_SCOPE>
+                <bandwidth>45000</bandwidth>
+                <downstream_template_id>1815</downstream_template_id>
+            </MATCHING_CRITERIA>
+            <INET>
+                <backoff_percentage>0.02</backoff_percentage>
+                <is_ifnetwork>1</is_ifnetwork>
+                <net_outroute_max_pps>500000</net_outroute_max_pps>
+                <recovery_threshold_msec>20</recovery_threshold_msec>
+                <net_release_timeout>10</net_release_timeout>
+                <odrp_timeout>100</odrp_timeout>
+                <da_interval>0</da_interval>
+                <allowed_modcod_bitmap>4127743</allowed_modcod_bitmap>
+                <net_outroute_bps>133100080</net_outroute_bps>
+                <max_queuing_msec>28</max_queuing_msec>
+            </INET>
+            <TX_CARRIER>
+                <outroute_carrier_id>1817</outroute_carrier_id>
+                <relative_center_freq>0</relative_center_freq>
+                <symbol_rate>40000</symbol_rate>
+                <power>-4</power>
+                <carrier_spacing>1.2</carrier_spacing>
+            </TX_CARRIER>
+        </OUTBOUND>
+    </data>
+</idirect-inet_ob_profile></config></edit-config></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+.... sending msg (close-session)
+>>>> msg netconf >>>>
+
+#91
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><close-session /></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+. executing test named "poc.js"
+.. ssh connection ready
+... netconf subsystem acquired
+.... sending client hello
+>>>> msg netconf hello >>>>
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability><capability>urn:ietf:params:netconf:base:1.1</capability><capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability><capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability></capabilities></hello>]]>]]>
+---- msg netconf hello ----
+.... received (partial) msg, len: 3776
+<<<< partial msg <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>42</session-id></hello>]]>]]>
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>42</session-id></hello>
+---- msg netconf ----
+..... hello
+...... capability - urn:ietf:params:netconf:base:1.0
+...... capability - urn:ietf:params:netconf:base:1.1
+...... capability - urn:ietf:params:netconf:capability:writable-running:1.0
+...... capability - urn:ietf:params:netconf:capability:candidate:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.1
+...... capability - urn:ietf:params:netconf:capability:xpath:1.0
+...... capability - urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file
+...... capability - urn:ietf:params:netconf:capability:validate:1.0
+...... capability - urn:ietf:params:netconf:capability:validate:1.1
+...... capability - urn:ietf:params:netconf:capability:rollback-on-error:1.0
+...... capability - urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&also-supported=report-all-tagged
+...... capability - urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8
+...... capability - http://tail-f.com/ns/netconf/extensions
+...... capability - http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&revision=2015-06-16
+...... capability - http://tail-f.com/ns/common/query?module=tailf-common-query&revision=2017-12-15
+...... capability - http://tail-f.com/ns/example/dhcpd?module=dhcpd
+...... capability - http://tail-f.com/ns/kicker?module=tailf-kicker&revision=2017-09-28
+...... capability - http://tail-f.com/yang/acm?module=tailf-acm&revision=2013-03-07
+...... capability - http://tail-f.com/yang/common?module=tailf-common&revision=2018-03-01
+...... capability - http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&revision=2016-11-24
+...... capability - http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&revision=2017-11-20
+...... capability - http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&revision=2018-06-19
+...... capability - http://yang.idirect.net/idirect-remote?module=idirect-remote&revision=2018-06-19
+...... capability - urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&revision=2014-08-06&features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5
+...... capability - urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&revision=2012-02-22
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&revision=2010-10-04
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&revision=2012-02-06
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&revision=2016-06-21
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&revision=2011-06-01
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&revision=2011-06-01
+>>>> msg netconf >>>>
+
+#2207
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <target>
+        <running />
+    </target>
+    <config><idirect-inet_ob_profile xmlns='http://yang.idirect.net/idirect-inet_ob_profile'>
+    <idx>9876</idx>
+    <data>
+        <NMS>
+            <type>PP_INET_OB_OPT</type>
+            <element_id>NaN</element_id>
+            <version>V1.2.0.0</version>
+            <element_parent_id>NaN</element_parent_id>
+        </NMS>
+        <OUTBOUND>
+            <DVBS2>
+                <system_margin_steady_state>0.5</system_margin_steady_state>
+                <fast_fade_margin>1</fast_fade_margin>
+                <fast_slope>0.3</fast_slope>
+                <fast_fade_threshold>0.5</fast_fade_threshold>
+                <mode>acm</mode>
+            </DVBS2>
+            <MATCHING_CRITERIA>
+                <GEO_SCOPE>
+                    <beam_id>1</beam_id>
+                    <sat_domain>SAT_0</sat_domain>
+                </GEO_SCOPE>
+                <bandwidth>NaN</bandwidth>
+                <downstream_template_id>NaN</downstream_template_id>
+            </MATCHING_CRITERIA>
+            <INET>
+                <backoff_percentage>NaN</backoff_percentage>
+                <is_ifnetwork>0</is_ifnetwork>
+                <net_outroute_max_pps>500000</net_outroute_max_pps>
+                <recovery_threshold_msec>20</recovery_threshold_msec>
+                <net_release_timeout>10</net_release_timeout>
+                <odrp_timeout>100</odrp_timeout>
+                <da_interval>0</da_interval>
+                <allowed_modcod_bitmap>4127743</allowed_modcod_bitmap>
+                <net_outroute_bps>133100080</net_outroute_bps>
+                <max_queuing_msec>28</max_queuing_msec>
+            </INET>
+            <TX_CARRIER>
+                <outroute_carrier_id>1817</outroute_carrier_id>
+                <relative_center_freq>0</relative_center_freq>
+                <symbol_rate>40000</symbol_rate>
+                <power>-4</power>
+                <carrier_spacing>1.2</carrier_spacing>
+            </TX_CARRIER>
+        </OUTBOUND>
+    </data>
+</idirect-inet_ob_profile></config></edit-config></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 781
+<<<< partial msg <<<<
+
+#771
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><rpc-error>
+<error-type>application</error-type>
+<error-tag>invalid-value</error-tag>
+<error-severity>error</error-severity>
+<error-path xmlns:idirect-inet_ob_profile="http://yang.idirect.net/idirect-inet_ob_profile" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    /nc:rpc/nc:edit-config/nc:config/idirect-inet_ob_profile:idirect-inet_ob_profile[idirect-inet_ob_profile:idx='9876']/idirect-inet_ob_profile:data/idirect-inet_ob_profile:NMS/idirect-inet_ob_profile:element_id
+  </error-path><error-message xml:lang="en">"NaN" is not a valid value.</error-message><error-info><bad-element>element_id</bad-element>
+</error-info>
+</rpc-error>
+</rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><rpc-error>
+<error-type>application</error-type>
+<error-tag>invalid-value</error-tag>
+<error-severity>error</error-severity>
+<error-path xmlns:idirect-inet_ob_profile="http://yang.idirect.net/idirect-inet_ob_profile" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    /nc:rpc/nc:edit-config/nc:config/idirect-inet_ob_profile:idirect-inet_ob_profile[idirect-inet_ob_profile:idx='9876']/idirect-inet_ob_profile:data/idirect-inet_ob_profile:NMS/idirect-inet_ob_profile:element_id
+  </error-path><error-message xml:lang="en">"NaN" is not a valid value.</error-message><error-info><bad-element>element_id</bad-element>
+</error-info>
+</rpc-error>
+</rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+.... sending msg (close-session)
+>>>> msg netconf >>>>
+
+#91
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><close-session /></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+. executing test named "poc.js"
+.. ssh connection ready
+... netconf subsystem acquired
+.... sending client hello
+>>>> msg netconf hello >>>>
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability><capability>urn:ietf:params:netconf:base:1.1</capability><capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability><capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability></capabilities></hello>]]>]]>
+---- msg netconf hello ----
+.... received (partial) msg, len: 3776
+<<<< partial msg <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>43</session-id></hello>]]>]]>
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>43</session-id></hello>
+---- msg netconf ----
+..... hello
+...... capability - urn:ietf:params:netconf:base:1.0
+...... capability - urn:ietf:params:netconf:base:1.1
+...... capability - urn:ietf:params:netconf:capability:writable-running:1.0
+...... capability - urn:ietf:params:netconf:capability:candidate:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.1
+...... capability - urn:ietf:params:netconf:capability:xpath:1.0
+...... capability - urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file
+...... capability - urn:ietf:params:netconf:capability:validate:1.0
+...... capability - urn:ietf:params:netconf:capability:validate:1.1
+...... capability - urn:ietf:params:netconf:capability:rollback-on-error:1.0
+...... capability - urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&also-supported=report-all-tagged
+...... capability - urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8
+...... capability - http://tail-f.com/ns/netconf/extensions
+...... capability - http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&revision=2015-06-16
+...... capability - http://tail-f.com/ns/common/query?module=tailf-common-query&revision=2017-12-15
+...... capability - http://tail-f.com/ns/example/dhcpd?module=dhcpd
+...... capability - http://tail-f.com/ns/kicker?module=tailf-kicker&revision=2017-09-28
+...... capability - http://tail-f.com/yang/acm?module=tailf-acm&revision=2013-03-07
+...... capability - http://tail-f.com/yang/common?module=tailf-common&revision=2018-03-01
+...... capability - http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&revision=2016-11-24
+...... capability - http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&revision=2017-11-20
+...... capability - http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&revision=2018-06-19
+...... capability - http://yang.idirect.net/idirect-remote?module=idirect-remote&revision=2018-06-19
+...... capability - urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&revision=2014-08-06&features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5
+...... capability - urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&revision=2012-02-22
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&revision=2010-10-04
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&revision=2012-02-06
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&revision=2016-06-21
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&revision=2011-06-01
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&revision=2011-06-01
+>>>> msg netconf >>>>
+
+#2211
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <target>
+        <running />
+    </target>
+    <config><idirect-inet_ob_profile xmlns='http://yang.idirect.net/idirect-inet_ob_profile'>
+    <idx>9876</idx>
+    <data>
+        <NMS>
+            <type>PP_INET_OB_OPT</type>
+            <element_id>1815</element_id>
+            <version>V1.2.0.0</version>
+            <element_parent_id>61</element_parent_id>
+        </NMS>
+        <OUTBOUND>
+            <DVBS2>
+                <system_margin_steady_state>0.5</system_margin_steady_state>
+                <fast_fade_margin>1</fast_fade_margin>
+                <fast_slope>0.3</fast_slope>
+                <fast_fade_threshold>0.5</fast_fade_threshold>
+                <mode>acm</mode>
+            </DVBS2>
+            <MATCHING_CRITERIA>
+                <GEO_SCOPE>
+                    <beam_id>1</beam_id>
+                    <sat_domain>SAT_0</sat_domain>
+                </GEO_SCOPE>
+                <bandwidth>45000</bandwidth>
+                <downstream_template_id>1815</downstream_template_id>
+            </MATCHING_CRITERIA>
+            <INET>
+                <backoff_percentage>0.02</backoff_percentage>
+                <is_ifnetwork>1</is_ifnetwork>
+                <net_outroute_max_pps>500000</net_outroute_max_pps>
+                <recovery_threshold_msec>20</recovery_threshold_msec>
+                <net_release_timeout>10</net_release_timeout>
+                <odrp_timeout>100</odrp_timeout>
+                <da_interval>0</da_interval>
+                <allowed_modcod_bitmap>4127743</allowed_modcod_bitmap>
+                <net_outroute_bps>133100080</net_outroute_bps>
+                <max_queuing_msec>28</max_queuing_msec>
+            </INET>
+            <TX_CARRIER>
+                <outroute_carrier_id>1817</outroute_carrier_id>
+                <relative_center_freq>0</relative_center_freq>
+                <symbol_rate>40000</symbol_rate>
+                <power>-4</power>
+                <carrier_spacing>1.2</carrier_spacing>
+            </TX_CARRIER>
+        </OUTBOUND>
+    </data>
+</idirect-inet_ob_profile></config></edit-config></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+.... sending msg (close-session)
+>>>> msg netconf >>>>
+
+#91
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><close-session /></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+. executing test named "poc.js"
+.. ssh connection ready
+... netconf subsystem acquired
+.... sending client hello
+>>>> msg netconf hello >>>>
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability><capability>urn:ietf:params:netconf:base:1.1</capability><capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability><capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability></capabilities></hello>]]>]]>
+---- msg netconf hello ----
+.... received (partial) msg, len: 3776
+<<<< partial msg <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>45</session-id></hello>]]>]]>
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>45</session-id></hello>
+---- msg netconf ----
+..... hello
+...... capability - urn:ietf:params:netconf:base:1.0
+...... capability - urn:ietf:params:netconf:base:1.1
+...... capability - urn:ietf:params:netconf:capability:writable-running:1.0
+...... capability - urn:ietf:params:netconf:capability:candidate:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.1
+...... capability - urn:ietf:params:netconf:capability:xpath:1.0
+...... capability - urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file
+...... capability - urn:ietf:params:netconf:capability:validate:1.0
+...... capability - urn:ietf:params:netconf:capability:validate:1.1
+...... capability - urn:ietf:params:netconf:capability:rollback-on-error:1.0
+...... capability - urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&also-supported=report-all-tagged
+...... capability - urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8
+...... capability - http://tail-f.com/ns/netconf/extensions
+...... capability - http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&revision=2015-06-16
+...... capability - http://tail-f.com/ns/common/query?module=tailf-common-query&revision=2017-12-15
+...... capability - http://tail-f.com/ns/example/dhcpd?module=dhcpd
+...... capability - http://tail-f.com/ns/kicker?module=tailf-kicker&revision=2017-09-28
+...... capability - http://tail-f.com/yang/acm?module=tailf-acm&revision=2013-03-07
+...... capability - http://tail-f.com/yang/common?module=tailf-common&revision=2018-03-01
+...... capability - http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&revision=2016-11-24
+...... capability - http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&revision=2017-11-20
+...... capability - http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&revision=2018-06-19
+...... capability - http://yang.idirect.net/idirect-remote?module=idirect-remote&revision=2018-06-19
+...... capability - urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&revision=2014-08-06&features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5
+...... capability - urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&revision=2012-02-22
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&revision=2010-10-04
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&revision=2012-02-06
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&revision=2016-06-21
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&revision=2011-06-01
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&revision=2011-06-01
+>>>> msg netconf >>>>
+
+#2360
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <target>
+        <running />
+    </target>
+    <config><idirect-inet_ob_profile xmlns='http://yang.idirect.net/idirect-inet_ob_profile'>
+    <idx>9876</idx>
+    <data>
+        <NMS>
+            <type>PP_INET_OB_OPT</type>
+            <element_id>1815</element_id>
+            <version>V1.2.0.0</version>
+            <element_parent_id>61</element_parent_id>
+        </NMS>
+        <OUTBOUND>
+            <DVBS2>
+                <system_margin_steady_state>0.5</system_margin_steady_state>
+                <fast_fade_margin>1</fast_fade_margin>
+                <fast_slope>0.3</fast_slope>
+                <fast_fade_threshold>0.5</fast_fade_threshold>
+                <mode>acm</mode>
+            </DVBS2>
+            <MATCHING_CRITERIA>
+                <GEO_SCOPE>
+                    <beam_id>1</beam_id>
+                    <sat_domain>SAT_0</sat_domain>
+                </GEO_SCOPE>
+                <GEO_SCOPE>
+                    <beam_id>1</beam_id>
+                    <sat_domain>SAT_0</sat_domain>
+                </GEO_SCOPE>
+                <bandwidth>45000</bandwidth>
+                <downstream_template_id>1815</downstream_template_id>
+            </MATCHING_CRITERIA>
+            <INET>
+                <backoff_percentage>0.02</backoff_percentage>
+                <is_ifnetwork>1</is_ifnetwork>
+                <net_outroute_max_pps>500000</net_outroute_max_pps>
+                <recovery_threshold_msec>20</recovery_threshold_msec>
+                <net_release_timeout>10</net_release_timeout>
+                <odrp_timeout>100</odrp_timeout>
+                <da_interval>0</da_interval>
+                <allowed_modcod_bitmap>4127743</allowed_modcod_bitmap>
+                <net_outroute_bps>133100080</net_outroute_bps>
+                <max_queuing_msec>28</max_queuing_msec>
+            </INET>
+            <TX_CARRIER>
+                <outroute_carrier_id>1817</outroute_carrier_id>
+                <relative_center_freq>0</relative_center_freq>
+                <symbol_rate>40000</symbol_rate>
+                <power>-4</power>
+                <carrier_spacing>1.2</carrier_spacing>
+            </TX_CARRIER>
+        </OUTBOUND>
+    </data>
+</idirect-inet_ob_profile></config></edit-config></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+.... sending msg (close-session)
+>>>> msg netconf >>>>
+
+#91
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><close-session /></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+. executing test named "poc.js"
+.. ssh connection ready
+... netconf subsystem acquired
+.... sending client hello
+>>>> msg netconf hello >>>>
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability><capability>urn:ietf:params:netconf:base:1.1</capability><capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability><capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability></capabilities></hello>]]>]]>
+---- msg netconf hello ----
+.... received (partial) msg, len: 3776
+<<<< partial msg <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>46</session-id></hello>]]>]]>
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+<capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8</capability>
+<capability>http://tail-f.com/ns/netconf/extensions</capability>
+<capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&amp;revision=2015-06-16</capability>
+<capability>http://tail-f.com/ns/common/query?module=tailf-common-query&amp;revision=2017-12-15</capability>
+<capability>http://tail-f.com/ns/example/dhcpd?module=dhcpd</capability>
+<capability>http://tail-f.com/ns/kicker?module=tailf-kicker&amp;revision=2017-09-28</capability>
+<capability>http://tail-f.com/yang/acm?module=tailf-acm&amp;revision=2013-03-07</capability>
+<capability>http://tail-f.com/yang/common?module=tailf-common&amp;revision=2018-03-01</capability>
+<capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&amp;revision=2013-06-14</capability>
+<capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&amp;revision=2016-11-24</capability>
+<capability>http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&amp;revision=2017-11-20</capability>
+<capability>http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&amp;revision=2018-06-19</capability>
+<capability>http://yang.idirect.net/idirect-remote?module=idirect-remote&amp;revision=2018-06-19</capability>
+<capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&amp;revision=2014-08-06&amp;features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&amp;revision=2012-02-22</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&amp;revision=2010-10-04</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&amp;revision=2012-02-06</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&amp;revision=2016-06-21</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&amp;revision=2013-07-15</capability>
+<capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&amp;revision=2011-06-01</capability>
+<capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&amp;revision=2011-06-01</capability>
+</capabilities>
+<session-id>46</session-id></hello>
+---- msg netconf ----
+..... hello
+...... capability - urn:ietf:params:netconf:base:1.0
+...... capability - urn:ietf:params:netconf:base:1.1
+...... capability - urn:ietf:params:netconf:capability:writable-running:1.0
+...... capability - urn:ietf:params:netconf:capability:candidate:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.0
+...... capability - urn:ietf:params:netconf:capability:confirmed-commit:1.1
+...... capability - urn:ietf:params:netconf:capability:xpath:1.0
+...... capability - urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,sftp,file
+...... capability - urn:ietf:params:netconf:capability:validate:1.0
+...... capability - urn:ietf:params:netconf:capability:validate:1.1
+...... capability - urn:ietf:params:netconf:capability:rollback-on-error:1.0
+...... capability - urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&also-supported=report-all-tagged
+...... capability - urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&module-set-id=a9af81c73572a6c4a3b99dc0a5f9aeb8
+...... capability - http://tail-f.com/ns/netconf/extensions
+...... capability - http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&revision=2015-06-16
+...... capability - http://tail-f.com/ns/common/query?module=tailf-common-query&revision=2017-12-15
+...... capability - http://tail-f.com/ns/example/dhcpd?module=dhcpd
+...... capability - http://tail-f.com/ns/kicker?module=tailf-kicker&revision=2017-09-28
+...... capability - http://tail-f.com/yang/acm?module=tailf-acm&revision=2013-03-07
+...... capability - http://tail-f.com/yang/common?module=tailf-common&revision=2018-03-01
+...... capability - http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&revision=2013-06-14
+...... capability - http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&revision=2016-11-24
+...... capability - http://tail-f.com/yang/xsd-types?module=tailf-xsd-types&revision=2017-11-20
+...... capability - http://yang.idirect.net/idirect-inet_ob_profile?module=idirect-inet_ob_profile&revision=2018-06-19
+...... capability - http://yang.idirect.net/idirect-remote?module=idirect-remote&revision=2018-06-19
+...... capability - urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&revision=2014-08-06&features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5
+...... capability - urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&revision=2012-02-22
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&revision=2010-10-04
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&revision=2012-02-06
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&revision=2016-06-21
+...... capability - urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&revision=2013-07-15
+...... capability - urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&revision=2011-06-01
+...... capability - urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&revision=2011-06-01
+>>>> msg netconf >>>>
+
+#2211
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <target>
+        <running />
+    </target>
+    <config><idirect-inet_ob_profile xmlns='http://yang.idirect.net/idirect-inet_ob_profile'>
+    <idx>9876</idx>
+    <data>
+        <NMS>
+            <type>PP_INET_OB_OPT</type>
+            <element_id>1815</element_id>
+            <version>V1.2.0.0</version>
+            <element_parent_id>61</element_parent_id>
+        </NMS>
+        <OUTBOUND>
+            <DVBS2>
+                <system_margin_steady_state>0.5</system_margin_steady_state>
+                <fast_fade_margin>1</fast_fade_margin>
+                <fast_slope>0.3</fast_slope>
+                <fast_fade_threshold>0.5</fast_fade_threshold>
+                <mode>acm</mode>
+            </DVBS2>
+            <MATCHING_CRITERIA>
+                <GEO_SCOPE>
+                    <beam_id>1</beam_id>
+                    <sat_domain>SAT_0</sat_domain>
+                </GEO_SCOPE>
+                <bandwidth>45000</bandwidth>
+                <downstream_template_id>1815</downstream_template_id>
+            </MATCHING_CRITERIA>
+            <INET>
+                <backoff_percentage>0.02</backoff_percentage>
+                <is_ifnetwork>1</is_ifnetwork>
+                <net_outroute_max_pps>500000</net_outroute_max_pps>
+                <recovery_threshold_msec>20</recovery_threshold_msec>
+                <net_release_timeout>10</net_release_timeout>
+                <odrp_timeout>100</odrp_timeout>
+                <da_interval>0</da_interval>
+                <allowed_modcod_bitmap>4127743</allowed_modcod_bitmap>
+                <net_outroute_bps>133100080</net_outroute_bps>
+                <max_queuing_msec>28</max_queuing_msec>
+            </INET>
+            <TX_CARRIER>
+                <outroute_carrier_id>1817</outroute_carrier_id>
+                <relative_center_freq>0</relative_center_freq>
+                <symbol_rate>40000</symbol_rate>
+                <power>-4</power>
+                <carrier_spacing>1.2</carrier_spacing>
+            </TX_CARRIER>
+        </OUTBOUND>
+    </data>
+</idirect-inet_ob_profile></config></edit-config></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply
+.... sending msg (close-session)
+>>>> msg netconf >>>>
+
+#91
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><close-session /></rpc>
+##
+
+---- msg netconf ----
+.... received (partial) msg, len: 140
+<<<< partial msg <<<<
+
+#130
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+##
+
+---- partial msg ----
+.... processing incoming request
+<<<< msg netconf <<<<
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"><ok/></rpc-reply>
+---- msg netconf ----
+..... rpc-reply

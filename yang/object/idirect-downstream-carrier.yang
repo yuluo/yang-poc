@@ -1,0 +1,108 @@
+module idirect-downstream-carrier {
+	namespace "http://yang.idirect.net/downstreamcarrier";
+	prefix downstreamcarrier;
+	
+	import idirect-type {
+	    prefix idirecttype;
+	}
+	
+	import idirect-enum {
+		prefix idirectenum;
+	}
+	
+	organization "VT iDirect";
+	contact "Maestro";
+	description "A test model for downstreamcarrier";
+	
+	revision 2019-02-26 {
+	    description "prove of concept";
+	}
+		
+	container downstreamcarrier {
+	    list downstreamcarrier {
+	    	min-elements 1;
+	    	key "obj_id";
+			description "downstreamcarrier";
+		
+			uses idirecttype:obj_header;
+			
+			leaf carrier_spacing {
+			    type idirecttype:positive-decimal;
+			    default 1.2;
+			    description "Spacing";
+			}
+			
+			leaf symbolrate {
+				type idirecttype:int-range-1000-45000;
+				mandatory true;
+				units "KSps";
+				description "Symbol Rate";
+			}
+			
+			leaf relativecentrefrequency {
+				type idirecttype:positive-decimal;
+				mandatory true;
+				units "MHz";
+				description "Relative Centre Frequency";
+			}
+			
+			leaf power {
+				type idirecttype:decimal-range-35-5;
+				default -10;
+				units "dBm";
+				description "Power";
+			}
+			
+			leaf modulation {
+				type idirectenum:emodulationtype;
+				description "Modulation";
+			}
+			
+			leaf minmodcod {
+				type idirectenum:emodcodtype;
+				description "Minimum MODCOD";
+			}
+			
+			leaf maxmodcod {
+				type idirectenum:emodcodtype;
+				description "Maximum MODCOD";
+			}
+			
+			leaf dvbs2threshold {
+				type idirecttype:positive-decimal;
+				default 0.2;
+				units "dB";
+				description "DVB-S2 Threshold";
+			}
+			
+			leaf dvbs2systemmarginsteadystate {
+				type idirecttype:positive-decimal;
+				default 0.5;
+				units "dB";
+				description "DVB-S2 System Margin Steady State";
+			}
+			
+			leaf dvbs2fastfademargin {
+				type idirecttype:positive-decimal;
+				default 1;
+				units "dB";
+				description "DVB-S2 Fast Fade Margin";
+			}
+
+			leaf dvbs2fastslope {
+				type idirecttype:positive-decimal;
+				default 0.3;
+				units "dB/s";
+				description "DVB-S2 Fast Fade Slope";
+			}
+
+			leaf dvbs2fastfadethreshold {
+				type idirecttype:positive-decimal;
+				default 0.5;
+				units "dB";
+				description "DVB-S2 Fast Fade Threshold";
+			}
+			
+	    }
+	}    
+}	

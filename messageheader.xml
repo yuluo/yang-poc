@@ -1,0 +1,5 @@
+<edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <target>
+        <running />
+    </target>
+    <config>

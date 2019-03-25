@@ -1,0 +1,126 @@
+module idirect-beam {
+	namespace "http://yang.idirect.net/beam";
+	prefix beam;
+	
+	import idirect-type {
+	  prefix idirecttype;
+	}
+	
+	import idirect-enum {
+	  prefix idirectenum;
+	}
+	
+	import idirect-network-version {
+		prefix idirectnetworkversion;
+	}
+	
+	organization "VT iDirect";
+	contact "Maestro";
+	description "A test model for beam";
+
+	revision 2019-02-26 {
+	  description "prove of concept";
+	}
+	
+	
+	container beam {
+	  list beam {
+	  	key "obj_id";
+		description "beam";
+		
+		uses idirecttype:obj_header;
+		
+		leaf beam_index {
+		    type idirecttype:int-range-1-255;
+		    mandatory true;
+		    description "Beam Index";
+		}
+		
+		leaf azimuth {
+		    type idirecttype:decimal-range-10;
+		    description "TODO Azimuth";
+		}
+
+		leaf elevation {
+		    type idirecttype:decimal-range-10;
+		    description "Elevation";
+		}		
+
+		leaf radius {
+		    type idirecttype:decimal-range-0-10;
+		    description "RADIUS";
+		}
+
+		leaf gbyt {
+		    type idirecttype:decimal;
+		    description "G/T";
+		}
+		
+		leaf eirp {
+		    type idirecttype:decimal;
+		    description "EIRP";
+		}
+		
+		leaf thresholdprofile_id {
+			type uint64;
+			description "Threshold Profile";
+		}
+		
+		leaf autopopulate {
+			type int64;
+			default 0;
+			description "Auto Populate iNet and Inroute Group";
+		}
+		
+		leaf sac_in_centre {
+			type idirecttype:int-range-1-32767;
+			default 32767;
+			description "SAC In Centre";
+		}		
+	  }
+	}
+	
+	augment "/beam:beam/beam:beam" {
+      when "/idirectnetworkversion:network_version = '1.2.0.0'";
+      
+      leaf geojson {
+          type string;
+          description "GeoJSON";
+      }
+      
+      leaf beamcontour {
+      	  type string;
+          description "Beam Contour List";
+      }
+      
+      leaf beam_type {
+      	  type idirectenum:beamtype;
+      	  default "Circular";
+      }
+      
+      container circular-beam-rules {
+      	  when "../beam_type = 'Circular'";
+      	  
+      	  must "/beam:beam/beam:beam/azimuth" {
+      	  	error-message "azimuth is mandatory when beam type is Circular";
+      	  }
+      	  
+      	  must "/beam:beam/beam:beam/elevation" {
+      	  	error-message "elevation is mandatory when beam type is Circular";
+      	  }
+      	  
+      	  must "/beam:beam/beam:beam/radius" {
+      	  	error-message "radius is mandatory when beam type is Circular";
+      	  }
+      }
+      
+      container non-circular-beam-rules {
+      	  when "../beam_type = 'Non-Circular'";
+      	  
+      	  must "../beamcontour" {
+      	  	error-message "beamcontour is mandatory when beam type is Non-Circular";
+      	  }
+      }
+  	}
+
+}

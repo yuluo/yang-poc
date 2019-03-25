@@ -1,0 +1,339 @@
+module idirect-inet_ob_profile {
+  namespace "http://yang.idirect.net/idirect-inet_ob_profile";
+  prefix idirect-inet_ob_profile;
+
+  organization
+    "VT iDirect";
+  contact
+    "Applied Research Team";
+  description
+    "A test model for idirect-inet_ob_profile";
+
+  revision 2018-06-19 {
+    description
+      "Initial version";
+    reference "See Alfresco";
+  }
+
+  list idirect-inet_ob_profile {
+    key "idx";
+    description
+      "Standalone config stuff";
+    leaf idx {
+      type uint32;
+      description
+        "List key";
+    }
+    container data {
+      uses config;
+      description
+        "Config data";
+    }
+  }
+
+  grouping config {
+    description
+      "Config stuff";
+    container NMS {
+      description
+        "No description available";
+      leaf element_id {
+        type uint32 {
+          range "1..max";
+        }
+        description
+          "Assigned by the NMS as the unique identifier of this instance; for use in reporting stats and events back to the NMS
+           RANGE: 1..max";
+      }
+      leaf element_parent_id {
+        type uint32 {
+          range "1..max";
+        }
+        description
+          "Assigned and tracked by the NMS
+           RANGE: 1..max";
+      }
+      leaf type {
+        type string;
+        description
+          "Option file type
+           “PP_INET_OB_OPT”";
+      }
+      leaf version {
+        type string;
+        description
+          "the NMS Network Version in effect when the options file was generated
+           valid NMS version";
+      }
+    }
+    container OUTBOUND {
+      description
+        "No description available";
+      container DVBS2 {
+        description
+          "Group";
+        leaf fast_fade_margin {
+          type decimal64 {
+            fraction-digits 4;
+            range "0.0..max";
+          }
+          description
+            "The additional margin added to the SNR thresholds measured at hardware qualification to arrive at the operational threshold during a \"fast fade\" condition. During a fade, this margin is added to the Steady State Margin.  In dB.
+             RANGE: 0.0..max";
+        }
+        leaf fast_fade_threshold {
+          type decimal64 {
+            fraction-digits 4;
+            range "0.0..max";
+          }
+          description
+            "The drop in receive signal strength between two consecutive SNR measurements by a remote that causes the remote to enter a \"fast fade\"state.  If, during steady state operation, a remote reports an SNR drop that is greater than or equal to the Fast Fade Threshold, then the hub considers the remote to be in the fast fade state.  In dB.
+             RANGE: 0.0..max";
+        }
+        leaf fast_slope {
+          type decimal64 {
+            fraction-digits 4;
+            range "0.0..max";
+          }
+          description
+            "The rate of drop in receive signal strength by a remote that causes the remote to enter a \"fast fade\" state. If, during steady state operation, a remote's SNR drops at a rate that is greater than or equal to the Fast Fade Slope, then the hub considers the remote to be in a fast fade state  In dB/sec.
+             RANGE: 0.0..max";
+        }
+        leaf mode {
+          type string;
+          description
+            "String indicating CCM mode or ACM mode.
+             Used to calculate the outroute bits per second.
+             Always select ACM.
+             ENUM: “ccm”
+             ENUM: “acm”";
+        }
+        leaf system_margin_steady_state {
+          type decimal64 {
+            fraction-digits 4;
+            range "0.0..max";
+          }
+          description
+            "The margin added to the SNR thresholds measured at hardware  qualification to arrive at the operational SNR threshold during steady state operation.  In dB.
+             Hardware qualification is determined per terminal type by examination of the terminal.
+             RANGE: 0.0..max";
+        }
+        leaf threshold {
+          type decimal64 {
+            fraction-digits 4;
+            range "0.0..max";
+          }
+          description
+            "RANGE: 0.0..max";
+        }
+      }
+      container INET {
+        description
+          "Group";
+        leaf allowed_modcod_bitmap {
+          type uint32 {
+            range "0..max";
+          }
+          description
+            "Allowed min and max DVB-S2 MODCOD. Decimal 4127743 = hex 3EFBFF
+             RANGE: 0..max
+             The encoding of this bitmap is based on the following table, showing a unique bit value for each possible MODCOD.   Currently, for iDirect, none of the 9/10 codings are supported – this means 0x00000400, 0x00010000, 0x00400000, and 0x08000000 must always be zeroed.  Also, iDirect does not currently support the 32ASPK modulation – this means that bits 0x00800000 and higher must also be zeroed.  Therefore, the most liberal (customers can of course further restrict this) value for this variable is: 0x003efbff.  Or, in decimal: 4127743.";
+        }
+        leaf backoff_percentage {
+          type decimal64 {
+            fraction-digits 2;
+            range "0.0..1.0";
+          }
+          description
+            "Used to grow or shrink queue depth.
+             Throttling the downstream bandwidth to avoid excessive queue buildup on the linecard.
+             RANGE: 0.0..1.0
+             PREC: 0.01";
+        }
+        leaf da_interval {
+          type uint32 {
+            range "0..max";
+          }
+          description
+            "Demand Allocation
+             RANGE: 0..max";
+        }
+        leaf is_encrypted {
+          type int32 {
+            range "0 | 1";
+          }
+          description
+            "whether the network is encrypted (and FIPS enabled) or not
+             0 = not encrypted; 
+             1 = encrypted
+             RANGE: 0 | 1";
+        }
+        leaf is_ifnetwork {
+          type int32 {
+            range "0 | 1";
+          }
+          description
+            "Whether or not this is an Intermediate Frequency (IF) network
+             0 = not an IF network;
+             1 = is an IF network
+             RANGE: 0 | 1";
+        }
+        leaf max_queuing_msec {
+          type uint32 {
+            range "0..100";
+          }
+          description
+            "Maybe symbol dependent (calculated)
+             RANGE: 0..100";
+        }
+        leaf net_outroute_bps {
+          type uint32 {
+            range "0..max";
+          }
+          description
+            "Tx carrier in bits per second
+             RANGE: 0..max";
+        }
+        leaf net_outroute_max_pps {
+          type uint32 {
+            range "0..max";
+          }
+          description
+            "Tx carrier in bits per second
+             RANGE: 0..max";
+        }
+        leaf net_release_timeout {
+          type uint32 {
+            range "0..max";
+          }
+          description
+            "RANGE: 0..max";
+        }
+        leaf odrp_timeout {
+          type uint32 {
+            range "0..max";
+          }
+          description
+            "RANGE: 0..max";
+        }
+        leaf recovery_threshold_msec {
+          type uint32 {
+            range "0..max";
+          }
+          description
+            "Network recovery threshold
+             RANGE: 0..max";
+        }
+      }
+      container MATCHING_CRITERIA {
+        description
+          "Group";
+        list GEO_SCOPE {
+          key "beam_id";
+          description
+            "List of GEO_SCOPE indexed by beam_id";
+          leaf beam_id {
+            type uint32 {
+              range "1..255";
+            }
+            description
+              "Beam index number
+               RANGE: 1..255";
+          }
+          leaf sat_domain {
+            type string;
+            description
+              "Satellite domain name
+               user text";
+          }
+        }
+        leaf bandwidth {
+          type decimal64 {
+            fraction-digits 3;
+            range "0..max";
+          }
+          description
+            "For this Profile to be valid, this bandwidth value must be less than or equal to the total bandwidth for this channel.
+             Assign some or all of a Channel's available bandwidth to this iNet.
+             RANGE: 0..max
+             PREC: 0.001
+             screen accepts (double)MHz and converts to (double)KSps by multiplying by 1000 and dividing by 1.2.
+             must be unique across all iNetProfiles";
+        }
+        leaf downstream_template_id {
+          type uint32 {
+            range "1..max";
+          }
+          description
+            "Unique iNet profile ID
+             RANGE: 1..max";
+        }
+      }
+      container MULTICAST_ENC {
+        description
+          "Group";
+        leaf multicast_enc_layer_enabled {
+          type int32 {
+            range "0 | 1";
+          }
+          description
+            "Whether or not multicast encryption is enabled.
+             0 = disabled;
+             1 = enabled
+             RANGE: 0 | 1";
+        }
+      }
+      container TX_CARRIER {
+        description
+          "Group";
+        leaf carrier_spacing {
+          type decimal64 {
+            fraction-digits 2;
+          }
+          description
+            "Partitions the total occupied bandwidth of the carrier: it represents the carrier bandwidth plus the guard band normalized by the symbol rate.
+             Controlls the rolloff factor of the carrier.
+             RANGE: 1.05 | 1.10 | 1.15 | 1.20
+             PREC: 0.01
+             “carrier_spacing” value must be in the 1.05 to 1.20 range, with a step (i.e., as a multiple) of 0.05.";
+        }
+        leaf outroute_carrier_id {
+          type uint32 {
+            range "1..max";
+          }
+          description
+            "The NMS object ID for the carrier object, which is used for stats reporting
+             RANGE: 1..max";
+        }
+        leaf power {
+          type decimal64 {
+            fraction-digits 4;
+            range "-35.0..5.0";
+          }
+          description
+            "Initial power on tx linecard for downstream carrier, in dBm
+             RANGE: -35.0..5.0";
+        }
+        leaf relative_center_freq {
+          type decimal64 {
+            fraction-digits 4;
+            range "0.0..max";
+          }
+          description
+            "Relative Centre Frequency: It is the  frequency offset assigned to the outbound carrier.
+             RANGE: 0.0..max";
+        }
+        leaf symbol_rate {
+          type uint32 {
+            range "1000..45000";
+          }
+          description
+            "Carrier symbol rate
+             RANGE: 1,000..45,000
+             The value must be a multiple of ‘10’; that is, the symbol rate must be a multiple of 10 KSps.
+             The “K” in “KSps” is 1,000 – not 1,024 – thus the value range is 1,000,000 through 45,000,000 in Sps.";
+        }
+      }
+    }
+  }
+}

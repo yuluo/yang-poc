@@ -1,0 +1,65 @@
+module idirect-satellite {
+	namespace "http://yang.idirect.net/satellite";
+	prefix satellite;
+	
+	import idirect-type {
+	    prefix idirecttype;
+	}
+
+	organization "VT iDirect";
+	contact "Maestro";
+	description "A test model for satellite";
+	
+	revision 2019-02-26 {
+	    description "prove of concept";
+	}
+	
+	container satellite {
+	    list satellite {
+	    	key "obj_id";
+			description "satellite";
+		
+			uses idirecttype:obj_header;
+			
+			leaf domainname {
+			    type string;
+			    mandatory true;
+			    description "Domain Name";
+			}
+			
+			leaf radius_sat_id {
+				type idirecttype:int-range-1-255;
+				mandatory true;
+				description "RADIUS Satellite ID";
+			}
+			
+			leaf longitude {
+				type idirecttype:decimal-range-180;
+				mandatory true;
+				units "degree";
+				description "Longitude";
+			}
+			
+			leaf latitude {
+				type idirecttype:decimal-range-0-90;
+				mandatory true;
+				units "degree";
+				description "Latitude";
+			}
+						
+			leaf orbital_inclination {
+				type idirecttype:decimal-range-0-90;
+				mandatory true;
+				units "degree";
+				description "Orbital Inclination";
+			}
+			
+			leaf minimum_look_angle {
+				type idirecttype:decimal;
+				description "Minimum Look Angle";
+			}
+					
+	    }
+	}  
+
+}	
